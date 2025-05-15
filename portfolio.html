@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My projects showcasing web development skills.">
+    <meta name="keywords" content="portfolio, projects, web development">
+    <meta name="author" content="Your Name">
+    <title>Portfolio - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="survey.html">Survey</a></li>
+            </ul>
+            <button id="theme-toggle">Toggle Dark Mode</button>
+        </nav>
+    </header>
+    <main>
+        <section id="portfolio">
+            <h1>My Projects</h1>
+            <div class="three-column">
+                <div class="project">
+                    <h2>Project 1</h2>
+                    <p class="project-details">"Hotel Management Course" Under Six Monthes.</p>
+                       
+                    <button onclick="toggleDetails(this)">Show Details</button>
+                    <img src="images1.jpeg" alt="Hotel"  height="200px" width="200px" float="center">
+                </div>
+                <div class="project">
+                    <h2>Project 2</h2>
+                    <p class="project-details">Modern Farming Procedure Course.</p>
+                    
+                    <button onclick="toggleDetails(this)">Show Details</button>
+                    <img src="images2.jpeg" alt="Farming"  height="200px" width="200px" float="center">
+                </div>
+                <div class="project">
+                    <h2>Project 3</h2>
+                    <p class="project-details">"Music Production Course" For Three Monthes.</p>
+                    
+                    <button onclick="toggleDetails(this)">Show Details</button>
+                    <img src="images3.jpeg" alt="Music"  height="200px" width="200px" float="center">
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Mohamedi@UDOM. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
