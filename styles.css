@@ -1,0 +1,305 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    color: #333;
+    transition: background 0.5s ease, color 0.3s ease;
+    min-height: 100vh;
+}
+
+/* Dark Mode */
+body.dark {
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    color: #e0e0e0;
+}
+
+body.dark nav {
+    background: #1a252f;
+}
+
+/* Fade-in Animation on Page Load */
+main {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Navigation */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #2d88ff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffeb3b;
+    transform: scale(1.1);
+    display: inline-block;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 8px 15px;
+    background: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background: #ff3d2e;
+    transform: rotate(360deg);
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #2d88ff;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.dark h1 {
+    color: #74ebd5;
+}
+
+/* Two-Column Layout for About */
+.two-column {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .two-column {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.two-column div {
+    width: 48%;
+}
+
+.two-column img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.two-column img:hover {
+    transform: scale(1.05);
+}
+
+/* Three-Column Layout for Portfolio */
+.three-column {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 20px;
+}
+
+.three-column .project {
+    width: 30%;
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark .three-column .project {
+    background: #34495e;
+}
+
+.three-column .project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.three-column .project h2 {
+    color: #2d88ff;
+}
+
+body.dark .three-column .project h2 {
+    color: #74ebd5;
+}
+
+.project-details {
+    display: none;
+    color: #666;
+}
+
+body.dark .project-details {
+    color: #ccc;
+}
+
+.project-details.show {
+    display: block;
+    animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Buttons */
+button {
+    background: #2d88ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: #1b5bbf;
+    transform: scale(1.05);
+}
+
+body.dark button {
+    background: #74ebd5;
+}
+
+body.dark button:hover {
+    background: #4ac1b1;
+}
+
+/* Form Styling */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.dark form {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+form label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #2d88ff;
+    outline: none;
+}
+
+body.dark form input, body.dark form textarea {
+    background: #2c3e50;
+    color: #e0e0e0;
+    border-color: #4ca1af;
+}
+
+/* Iframe Styling */
+iframe {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #2d88ff;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark footer {
+    background: #1a252f;
+}
+
+/* Print-Friendly CSS */
+@media print {
+    nav, footer, #theme-toggle {
+        display: none;
+    }
+    body {
+        background: none;
+        color: black;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .two-column, .three-column {
+        flex-direction: column;
+    }
+    .two-column div, .three-column .project {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    #theme-toggle {
+        position: static;
+        margin: 10px auto;
+        display: block;
+    }
+}
